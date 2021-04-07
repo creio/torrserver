@@ -3,17 +3,18 @@
 [TorrServer latest](https://github.com/YouROK/TorrServer/releases) amd64.
 
 ```bash
+mkdir torrserver_db
+
 docker run -d \
   --name torrserver \
   -p 8090:8090 \
-  -v ./torrserver_db:/torrserver \
+  -v ./torrserver_db:/torrserver/db \
   --restart unless-stopped \
   cretm/torrserver
 ```
 
 - `./torrserver_db` — local dir.
-- `/torrserver/TorrServer` — bin.
-- `/torrserver/config.db` — config.
+- `/torrserver_db/config.db` — config.
 
 Log.
 

@@ -3,7 +3,7 @@ FROM ubuntu:latest
 MAINTAINER Alex Creio <ctlos@protonmail.com>
 
 RUN echo "**** install curl ****" && \
-  apt-get update && apt-get install -y curl && mkdir /torrserver && \
+  apt-get update && apt-get install -y curl && mkdir -p /torrserver/db && \
   version=$(curl -s "https://github.com/YouROK/TorrServer/releases/latest" | sed 's#.*tag/\(.*\)\".*#\1#') && \
   echo "**** download $version ****" && \
   curl -o /torrserver/TorrServer \
@@ -11,6 +11,5 @@ RUN echo "**** install curl ****" && \
   chmod +x /torrserver/TorrServer
 
 EXPOSE 8090
-WORKDIR /torrserver
-VOLUME /torrserver
-ENTRYPOINT /torrserver/TorrServer
+ENTRYPOINT /torrserver/TorrServer --path /torrserver/db
+VOLUME /torrserver/db
