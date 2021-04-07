@@ -8,13 +8,13 @@ mkdir torrserver_db
 docker run -d \
   --name torrserver \
   -p 8090:8090 \
-  -v ./torrserver_db:/torrserver/db \
+  -v $PWD/torrserver_db:/torrserver/db \
   --restart unless-stopped \
   cretm/torrserver
 ```
 
-- `./torrserver_db` — local dir.
-- `/torrserver_db/config.db` — config.
+- `torrserver_db` — local dir.
+- `torrserver_db/config.db` — config.
 
 Log.
 
