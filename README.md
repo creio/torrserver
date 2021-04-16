@@ -1,6 +1,6 @@
 # Torrserver docker
 
-Version MatriX.89
+Version MatriX.90
 
 [TorrServer latest](https://github.com/YouROK/TorrServer/releases) amd64.
 
