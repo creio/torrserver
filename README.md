@@ -1,6 +1,6 @@
-# Torrserver docker
+# Torrserver docker alpine
 
-Version MatriX.106
+Version MatriX.109
 
 [TorrServer latest](https://github.com/YouROK/TorrServer/releases) amd64.
 
@@ -12,7 +12,7 @@ docker run -d \
   -p 8090:8090 \
   -v $PWD/torrserver_db:/torrserver/db \
   --restart unless-stopped \
-  cretm/torrserver
+  ghcr.io/creio/torrserver
 ```
 
 - `torrserver_db` — local dir.

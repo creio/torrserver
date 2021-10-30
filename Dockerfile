@@ -10,5 +10,5 @@ RUN echo "**** install curl ****" && \
   chmod +x /torrserver/TorrServer
 
 EXPOSE 8090
-ENTRYPOINT /torrserver/TorrServer --path /torrserver/db
+ENTRYPOINT GODEBUG=madvdontneed=1 /torrserver/TorrServer --path /torrserver/db
 VOLUME /torrserver/db
