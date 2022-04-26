@@ -26,7 +26,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Run check version YouROK/TorrServer
+    - name: Check version YouROK/TorrServer
       run: |
         old_version=$(cat README.md | grep Version | sed -n '/.*Version /s///p')
         new_version=$(curl -s "https://github.com/YouROK/TorrServer/releases/latest" | sed 's#.*tag/\(.*\)\".*#\1#')
