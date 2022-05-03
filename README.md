@@ -1,6 +1,6 @@
 # Torrserver docker alpine
 
-Version MatriX.112
+Version 
 
 [TorrServer latest](https://github.com/YouROK/TorrServer/releases) amd64.
 
